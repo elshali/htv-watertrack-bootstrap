@@ -49,7 +49,7 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: 'Source Sans Pro', sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -72,6 +72,52 @@
   --bs-link-hover-color: #0a58ca;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
+}
+
+.account-settings .user-profile {
+  margin: 0 0 1rem 0;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+.account-settings .user-profile .user-avatar {
+  margin: 0 0 1rem 0;
+}
+.account-settings .user-profile .user-avatar img {
+  width: 90px;
+  height: 90px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+.account-settings .user-profile h5.user-name {
+  margin: 0 0 0.5rem 0;
+}
+.account-settings .user-profile h6.user-email {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.account-settings .about {
+  margin: 1rem 0 0 0;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.card {
+  background: #272E48;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 0;
+  margin-bottom: 1rem;
+}
+.form-control {
+  border: 1px solid #596280;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-size: .825rem;
+  background: #1A233A;
+  color: #bcd0f7;
 }
 
 *,
@@ -511,6 +557,86 @@ progress {
   .display-2 {
     font-size: 4.5rem;
   }
+}
+
+body{
+  background:#eee;
+  margin-top:20px;
+}
+
+.panel {
+box-shadow: 0 2px 0 rgba(0,0,0,0.05);
+border-radius: 0;
+border: 0;
+margin-bottom: 24px;
+}
+
+.panel-dark.panel-colorful {
+background-color: #84E894;
+border-color: hsl(207, 9%, 25%);
+border-radius: 1em;
+color: #fff;
+background: rgba(132, 232, 148,.6)
+}
+
+.panel-danger.panel-colorful {
+background-color: #FFD353;
+border-color: #f76c51;
+border-radius: 1em;
+color: #fff;
+background: rgba(255, 212, 83,.6)
+}
+
+.panel-primary.panel-colorful {
+background-color: #84D6E8;
+border-color: #5fa2dd;
+border-radius: 1em;
+color: #fff;
+background: rgba(132, 214, 232,.6)
+}
+
+.panel-info.panel-colorful {
+background-color: #84D6E8;
+border-color: #4ebcda;
+border-radius: 1em;
+color: #fff;
+background: rgba(132, 214, 232,.6)
+}
+
+.panel-body {
+padding: 15px 15px;
+min-height: 220px;
+color: #000;
+font-family: 'Source Sans Pro', sans-serif;
+font-weight: 900;
+}
+
+.panel hr {
+border-color: rgba(0,0,0,0.1);
+}
+
+.mar-btm {
+margin-bottom: 15px;
+}
+
+h2, .h2 {
+font-size: 28px;
+}
+
+.small, small {
+font-size: 85%;
+}
+
+.text-sm {
+font-size: .9em;
+}
+
+.text-thin {
+font-weight: 300;
+}
+
+.text-semibold {
+font-weight: 600;
 }
 
 .display-3 {
@@ -1111,7 +1237,7 @@ progress {
   }
   .col-md-4 {
     flex: 0 0 auto;
-    width: 33.33333333%;
+    width: 40.33333333%;
   }
   .col-md-5 {
     flex: 0 0 auto;
@@ -3806,7 +3932,7 @@ textarea.form-control-lg {
   padding-bottom: var(--bs-navbar-brand-padding-y);
   margin-right: var(--bs-navbar-brand-margin-end);
   font-size: var(--bs-navbar-brand-font-size);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 900;
   color: var(--bs-navbar-brand-color);
   text-decoration: none;
@@ -3819,7 +3945,7 @@ textarea.form-control-lg {
 .navbar-nav {
   --bs-nav-link-padding-x: 0;
   --bs-nav-link-padding-y: 0.5rem;
-  --bs-nav-link-font-weight: ;
+  --bs-nav-link-font-weight: 900;
   --bs-nav-link-color: var(--bs-navbar-color);
   --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
   --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
