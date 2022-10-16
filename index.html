@@ -80,12 +80,12 @@
               <h1 style="font-size: 1.7em;"><strong>Drinks</strong></h1>
               <div class="scroll-bg-drinks" style="float: right;">
                 <div class="scroll-div">
-                  <div class="scroll-object" style="font-size: 20px; color:#123F16; padding-left: 15px;">
-                    <button type="button" class="btn btn-primary btn-lg btn-block" style="padding: 1em;">Current Contents</button><br>
-                      <button type="button" class="btn btn-secondary btn-lg btn-block">Water</button><br>
-                      <button type="button" class="btn btn-secondary btn-lg btn-block">Coffee</button><br>
-                      <button type="button" class="btn btn-secondary btn-lg btn-block">Milk</button><br>
-                      <button type="button" class="btn btn-secondary btn-lg btn-block">Pepsi</button>
+                  <div class="scroll-object" style="font-size: 20px; color:#000; padding-left: 15px;">
+                      <button type="button" class="btn btn-primary btn-lg btn-block my-1 mt-2" style="padding: 1em;">Current Contents</button><br>
+                      <button type="button" class="btn btn-secondary btn-lg btn-block my-1">Water</button><br>
+                      <button type="button" class="btn btn-secondary btn-lg btn-block my-1">Coffee</button><br>
+                      <button type="button" class="btn btn-secondary btn-lg btn-block my-1">Milk</button><br>
+                      <button type="button" class="btn btn-secondary btn-lg btn-block my-1 mb-2">Pepsi</button>
                   </div>
                 </div>
               </div>
@@ -155,8 +155,53 @@
         </div>
         <div class="col-md-4 col-sm-6 col-xs-12">
           <div class="panel panel-info panel-colorful">
-              <div class="panel-body text-center">
+              <div class="panel-body text-center" style="width: 100%; height: 100%;">
+                <canvas id="myChart" width="100%" height="100%" style="background-color: #DEEBFF; border-radius: 1em;"></canvas>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <script>
+                  const labels = [
+                    'Sunday',
+                    'Monday',
+                    'Tuesday',
+                    'Wednesday',
+                    'Thursday',
+                    'Friday',
+                    'Saturday',
+                  ];
+                
+                  const data = {
+                    labels: labels,
+                    datasets: [{
+                      label: 'Goals Met',
+                      backgroundColor: 'rgb(53, 100, 232)',
+                      borderColor: 'rgb(53, 100, 232)',
+                      data: [50, 60, 85, 30, 70, 90, 45],
+                    }]
+                  };
+              
+                  const config = {
+                    type: 'line',
+                    data: data,
+                    options: {
+                      scales: {
+                        y:{
+                          title:{
+                            display: true,
+                            text: 'Percentage'
+                          }
 
+                        },
+                      },
+                      maintainAspectRatio: false
+                    }
+                  };
+                </script>
+                <script>
+                  const myChart = new Chart(
+                    document.getElementById('myChart'),
+                    config
+                  );
+                </script>
               </div>
           </div>
       </div>
