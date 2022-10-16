@@ -11,12 +11,20 @@
     <script src="script.js"></script>
   </head>
   <body class="p-3 m-0 border-0 bd-example">
+    <script>
+      const locStorageName = localStorage.getItem("firstName");
+      console.log(locStorageName);
+      //document.getElementById("myNameTitle").innerHTML = locStorageName;
+      //r.style.setProperty('--blue', 'lightblue');
+    </script>
 
     <div class="container">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand";>INTAKE</a>
-          <a class="navbar-brand";>Hi, {name}</a>
+          <a class="navbar-brand";> Hi, <script>
+            document.write(locStorageName)
+          </script></a>
           <a class="navbar-brand"; href="signinup.html">
             <img src="/assets/user.png" alt="Profile" width="30" height="30">
           </a>
@@ -66,7 +74,7 @@
                     </div>
                     Caffeine Intake
                     <div class="progress" style="width: 70%; height: 2.5em;">
-                      <div class="progress-bar" role="progressbar" style="width: 53.3%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">80/150 g</div>
+                      <div class="progress-bar" role="progressbar" style="width: 53.3%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">80/150mg</div>
                     </div>
                   </div>
                 </div>
@@ -82,12 +90,12 @@
               <div class="scroll-bg-drinks" style="float: right;">
                 <div class="scroll-div">
                   <div class="scroll-object" style="font-size: 20px; color:#000; padding-left: 15px;">
-                      <button type="button" class="btn btn-primary btn-lg btn-block my-1 mt-2" style="padding: 1em;">Current Contents</button><br>
-                      <button type="button" class="btn btn-secondary btn-lg btn-block my-1">Water</button><br>
-                      <button type="button" class="btn btn-secondary btn-lg btn-block my-1">Coffee</button><br>
-                      <button type="button" class="btn btn-secondary btn-lg btn-block my-1">Milk</button><br>
-                      <button type="button" class="btn btn-secondary btn-lg btn-block my-1 mb-2">Pepsi</button>
-                  </div>
+                    <button type="button" class="btn btn-primary btn-lg btn-block my-1 mt-2" data-bs-toggle="modal" data-bs-target="#currentContentsModal" style="padding: 1em;">Current Contents</button><br>
+                    <button type="button" class="btn btn-secondary btn-lg btn-block my-1" data-bs-toggle="modal" data-bs-target="#waterModal">Water</button><br>
+                    <button type="button" class="btn btn-secondary btn-lg btn-block my-1" data-bs-toggle="modal" data-bs-target="#coffeeModal">Coffee</button><br>
+                    <button type="button" class="btn btn-secondary btn-lg btn-block my-1" data-bs-toggle="modal" data-bs-target="#milkModal">Milk</button><br>
+                    <button type="button" class="btn btn-secondary btn-lg btn-block my-1 mb-2" data-bs-toggle="modal" data-bs-target="#pepsiModal">Pepsi</button>
+                </div>
                 </div>
               </div>
         
@@ -188,6 +196,157 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal fade" id="currentContentsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Current Contents</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group" style="padding-bottom: 20px;">
+                  <label for="exampleFormControlSelect1">Water: 150ml<br>Pepsi: 300ml<br>------------------<br>Total Volume: 450ml</label>
+              </div>
+              <div class="form-group" style="padding-bottom: 20px;">
+            </div>
+          </div>
+              <div class="modal-footer">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="waterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Water</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group" style="padding-bottom: 20px;">
+                  <label for="exampleFormControlSelect1">Nutrition Facts(per 240ml): 
+                     Calories: 0 
+                    | Fat: 0g 
+                    | Sodium: 9.5mg 
+                    | Carbohydrates: 0g 
+                    | Fiber: 0g 
+                    | Sugars: 0g 
+                    | Protein: 0g<br><br>Current Volume: 150ml</label>
+              </div>
+              <div class="form-group" style="padding-bottom: 20px;">
+            </div>
+          </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="pourFunction()">Pour Up!</button>
+                <script>
+                  function pourFunction() {
+                    alert("Measuring Poured Contents...");
+                  }
+                  </script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="coffeeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Coffee</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group" style="padding-bottom: 20px;">
+                  <label for="exampleFormControlSelect1">Nutrition Facts(per 240ml): 
+                     Calories: 2.4 
+                    | Fat: 0g 
+                    | Sodium: 4.8mg 
+                    | Carbohydrates: 0g 
+                    | Fiber: 0g 
+                    | Sugars: 0g 
+                    | Protein: 0.3g 
+                    | Caffeine: 82mg 
+                    | Potassium: 118mg<br><br>Current Volume: 0ml</label>
+              </div>
+              <div class="form-group" style="padding-bottom: 20px;">
+            </div>
+          </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="pourFunction()">Pour Up!</button>
+                <script>
+                  function pourFunction() {
+                    alert("Measuring Poured Contents...");
+                  }
+                  </script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="milkModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Milk (3.25%)</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group" style="padding-bottom: 20px;">
+                  <label for="exampleFormControlSelect1">Nutrition Facts(per 240ml): 
+                    Calories: 149 
+                    | Protein: 8g 
+                    | Fat: 8g 
+                    | Carbohydrates: 12g 
+                    | Fiber: 0g 
+                    | Sugar: 12g<br><br>Current Volume: 0ml</label>
+              </div>
+              <div class="form-group" style="padding-bottom: 20px;">
+            </div>
+          </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="pourFunction()">Pour Up!</button>
+                <script>
+                  function pourFunction() {
+                    alert("Measuring Poured Contents...");
+                  }
+                  </script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="pepsiModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Pepsi</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group" style="padding-bottom: 20px;">
+                  <label for="exampleFormControlSelect1">Nutrition Facts(per 340ml): 
+                    Calories: 150 
+                    | Protein: 0g 
+                    | Fat: 0g 
+                    | Sodium: 30mg 
+                    | Carbohydrates: 12g 
+                    | Fiber: 0g 
+                    | Sugar: 41g<br><br>Current Volume: 300ml</label>
+              </div>
+              <div class="form-group" style="padding-bottom: 20px;">
+            </div>
+          </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="pourFunction()">Pour Up!</button>
+                <script>
+                  function pourFunction() {
+                    alert("Measuring Poured Contents...");
+                  }
+                  </script>
               </div>
             </div>
           </div>

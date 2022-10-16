@@ -22,6 +22,5 @@ function nameDisplayCheck() {
         let name = localStorage.getItem('name');
         console.log("hello");
         h5.textContent = `please work`;
-        
     }
 }

@@ -105,7 +105,7 @@
         </div>
 
 
-
+        
         
         <script>
             console.log('i am running');
@@ -114,17 +114,27 @@
             let name = document.getElementById("firstName1").value;
             let weight = document.getElementById("weight").value;
             
-            console.log(name);
-            console.log(weight);
+            //console.log(name);
+            //console.log(weight);
 
             localStorage.setItem("firstName", name);
-            localStorage.setItem("weight", weight);
+            localStorage.setItem("Weight", weight);
 
-            document.getElementById("name").innerHTML("changed");
+            /*
+                localStorage.setItem(firstNameKey, name);
+                localStorage.setItem(weightKey, weight);
+            */
+
+            //document.getElementById("name").innerHTML("changed");
+
+            const locStorage = localStorage.getItem("firstName");
+            console.log("Name is: " + locStorage);
 
             }
 
             
+        </script>
+        <script>
         </script>
   </body>
 </html>
