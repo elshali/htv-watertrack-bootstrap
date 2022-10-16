@@ -81,12 +81,12 @@
               <h1 style="font-size: 1.7em;"><strong>Drinks</strong></h1>
               <div class="scroll-bg-drinks" style="float: right;">
                 <div class="scroll-div">
-                  <div class="scroll-object" style="font-size: 20px; color:#123F16; padding-left: 15px;">
-                    <button type="button" class="btn btn-primary btn-lg btn-block my-1 mt2" style="padding: 1em;" data-bs-toggle="modal" data-bs-target="#currentcontentsModal">Current Contents</button><br>
-                      <button type="button" class="btn btn-secondary btn-lg btn-block my-1" data-bs-toggle="modal" data-bs-target="#waterModal">Water</button><br>
-                      <button type="button" class="btn btn-secondary btn-lg btn-block my-1" data-bs-toggle="modal" data-bs-target="#coffeeModal">Coffee</button><br>
-                      <button type="button" class="btn btn-secondary btn-lg btn-block my-1" data-bs-toggle="modal" data-bs-target="#milkModal">Milk</button><br>
-                      <button type="button" class="btn btn-secondary btn-lg btn-block my-1 mb-2" data-bs-toggle="modal" data-bs-target="#pepsiModal">Pepsi</button>
+                  <div class="scroll-object" style="font-size: 20px; color:#000; padding-left: 15px;">
+                      <button type="button" class="btn btn-primary btn-lg btn-block my-1 mt-2" style="padding: 1em;">Current Contents</button><br>
+                      <button type="button" class="btn btn-secondary btn-lg btn-block my-1">Water</button><br>
+                      <button type="button" class="btn btn-secondary btn-lg btn-block my-1">Coffee</button><br>
+                      <button type="button" class="btn btn-secondary btn-lg btn-block my-1">Milk</button><br>
+                      <button type="button" class="btn btn-secondary btn-lg btn-block my-1 mb-2">Pepsi</button>
                   </div>
                 </div>
               </div>
@@ -115,14 +115,15 @@
           </div>
               <div class="form-group" style="padding-bottom: 20px;">
                 <label for="GoalAmount">Goal Amount</label>
-                <input type="text" class="form-control" id="GoalAmount" placeholder="Enter the goal you want to reach (including units)">
+                <input type="text" class="form-control" id="GoalAmount" placeholder="Enter the goal you want to reach (including units)"  >
             </div>
             
           </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary" id="addGoalBTN">Save changes</button>
               </div>
+              
             </div>
           </div>
         </div>
@@ -317,6 +318,6 @@
       </div>
 	</div>
     </div>
-    
+    <script src = "addgoal.js"></script>
   </body>
 </html>
