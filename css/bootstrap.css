@@ -74,6 +74,59 @@
   --bs-highlight-bg: #fff3cd;
 }
 
+.btn-goals {
+  background:rgba(0, 0, 0, 0)
+
+}
+
+::-webkit-scrollbar{
+  width: 26px;
+ }
+ ::-webkit-scrollbar-track{
+  background:transparent;
+  border-radius: 10px;
+  margin-block: 3px;
+ }
+ ::-webkit-scrollbar-thumb{
+  background:#CFE4E9;
+  border:2px solid #A2ABAD;
+  border-radius: 10px;
+ }
+ .scroll-bg-goals{
+  background: #DEFFDF;
+  width: 70%;
+  border-radius: 10px;
+ }
+ .scroll-bg-limit{
+  background: #FFF4B6;
+  width: 70%;
+  border-radius: 10px;
+ }
+ .scroll-bg-drinks{
+  background: #DEEBFF;
+  width: 70%;
+  border-radius: 10px;
+ }
+ .scroll-div{
+  width: 98%;
+  height: 150px;
+  overflow: hidden;
+  overflow-y: scroll;
+ }
+ scroll-object{
+  color: white;
+  font-family: cursive;
+ }
+ 
+
+
+
+
+
+
+
+
+
 .account-settings .user-profile {
   margin: 0 0 1rem 0;
   padding-bottom: 1rem;
@@ -590,7 +643,7 @@ background: rgba(255, 212, 83,.6)
 .panel-primary.panel-colorful {
 background-color: #84D6E8;
 border-color: #5fa2dd;
-border-radius: 1em;
+border-radius: 25px;
 color: #fff;
 background: rgba(132, 214, 232,.6)
 }
@@ -598,13 +651,13 @@ background: rgba(132, 214, 232,.6)
 .panel-info.panel-colorful {
 background-color: #84D6E8;
 border-color: #4ebcda;
-border-radius: 1em;
+border-radius: 25px;
 color: #fff;
 background: rgba(132, 214, 232,.6)
 }
 
 .panel-body {
-padding: 15px 15px;
+padding: 20px 20px;
 min-height: 220px;
 color: #000;
 font-family: 'Source Sans Pro', sans-serif;

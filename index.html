@@ -24,33 +24,129 @@
       <div class="row">
         <div class="col-md-7 col-sm-8 col-xs-10">
             <div class="panel panel-dark panel-colorful">
-                <div class="panel-body text-left">
-                	<h1 style="font-size: 1.7em;">Goals</h1>
+                <div class="panel-body text-right">
+                	<h1 style="font-size: 1.7em;"><strong>Goals</strong>
+                  <button type="button" class="btn-goals" style="float:right; border: none;" data-bs-toggle="modal" data-bs-target="#goalsModal">+</button>
+                  </h1>
+
+                  <div class="scroll-bg-goals" style="float: right;">
+                    <div class="scroll-div">
+                      <div class="scroll-object" style="font-size: 20px; color:#123F16; padding-left: 15px;">
+                        Water Intake
+                        <div class="progress" style="width: 70%; height: 2.5em;">
+                          <div class="progress-bar" role="progressbar" style="width: 66.6%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">2/3 Litres</div>
+                        </div>
+                        Calorie Intake
+                        <div class="progress" style="width: 70%; height: 2.5em;">
+                          <div class="progress-bar" role="progressbar" style="width: 84%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">2100/2500 Cal</div>
+                        </div>
+                        Fiber Intake
+                        <div class="progress" style="width: 70%; height: 2.5em;">
+                          <div class="progress-bar" role="progressbar" style="width: 88.2%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">30/34 g</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+
                 </div>
             </div>
         </div>
         <div class="col-md-4 col-sm-8 col-xs-12">
         	<div class="panel panel-danger panel-colorful">
-        		<div class="panel-body text-left">
-              <h1 style="font-size: 1.7em;">Limitations</h1>
+        		<div class="panel-body text-right">
+              <h1 style="font-size: 1.7em;"><strong>Limitations</strong>
+              <button type="button" class="btn-goals" style="float:right; border: none;" data-bs-toggle="modal" data-bs-target="#limitationsModal">+</button>
+              <div class="scroll-bg-limit" style="float: right;">
+                <div class="scroll-div">
+                  <div class="scroll-object" style="font-size: 20px; color:#3F3812; padding-left: 15px;">
+                    Sugar Intake
+                    <div class="progress" style="width: 70%; height: 2.5em;">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">90/76 g</div>
+                    </div>
+                    Caffeine Intake
+                    <div class="progress" style="width: 70%; height: 2.5em;">
+                      <div class="progress-bar" role="progressbar" style="width: 53.3%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">80/150 g</div>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              </h1>
         		</div>
         	</div>
         </div>
         <div class="col-md-7 col-sm-6 col-xs-12">
         	<div class="panel panel-primary panel-colorful">
         		<div class="panel-body text-left">
-              <h1 style="font-size: 1.7em;">Drinks</h1>
+              <h1 style="font-size: 1.7em;"><strong>Drinks</strong></h1>
+              <div class="scroll-bg-drinks" style="float: right;">
+                <div class="scroll-div">
+                  <div class="scroll-object" style="font-size: 20px; color:#123F16; padding-left: 15px;">
+                    <button type="button" class="btn btn-primary btn-lg btn-block" style="padding: 1em;">Current Contents</button><br>
+                      <button type="button" class="btn btn-secondary btn-lg btn-block">Water</button><br>
+                      <button type="button" class="btn btn-secondary btn-lg btn-block">Coffee</button><br>
+                      <button type="button" class="btn btn-secondary btn-lg btn-block">Milk</button><br>
+                      <button type="button" class="btn btn-secondary btn-lg btn-block">Pepsi</button>
+                  </div>
+                </div>
+              </div>
         
         		</div>
         	</div>
         </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-        	<div class="panel panel-info panel-colorful">
-        		<div class="panel-body text-center">
-
-        		</div>
-        	</div>
-        </div>        
+        <div class="modal fade" id="goalsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">New Goal</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group" style="padding-bottom: 20px;">
+                  <label for="exampleFormControlSelect1">Goal Type</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Ingredient</option>
+                    <option>Fluid</option>
+                  </select>
+              </div>
+              <div class="form-group" style="padding-bottom: 20px;">
+                <label for="GoalAmount">Goal Amount</label>
+                <input type="text" class="form-control" id="GoalAmount" placeholder="Enter the goal you want to reach (including units)">
+            </div>
+          </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="limitationsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">New Limitation</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group" style="padding-bottom: 20px;">
+                  <label for="exampleFormControlSelect1">Limitation Type</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Ingredient</option>
+                    <option>Fluid</option>
+                  </select>
+              </div>
+              <div class="form-group" style="padding-bottom: 20px;">
+                <label for="GoalAmount">Limitation Amount</label>
+                <input type="text" class="form-control" id="GoalAmount" placeholder="Enter the limit you want to set">
+            </div>
+          </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
 	</div>
     </div>
   </body>
