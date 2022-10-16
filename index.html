@@ -166,14 +166,26 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
+                <div class="form-group" style="padding-bottom: 20px;">
+                  <label for="exampleFormControlSelect1">Nutrition Facts(per 240ml): 
+                     Calories: 0 
+                    | Fat: 0g 
+                    | Sodium: 9.5mg 
+                    | Carbohydrates: 0g 
+                    | Fiber: 0g 
+                    | Sugars: 0g 
+                    | Protein: 0g<br><br>Current Volume: 150ml</label>
+              </div>
               <div class="form-group" style="padding-bottom: 20px;">
-                <label for="GoalAmount">its just water. maybe some minerals or something</label>
-                <label for="GoalAmount"></label>
             </div>
           </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="pourFunction()">Pour Up!</button>
+                <script>
+                  function pourFunction() {
+                    alert("Measuring Poured Contents...");
+                  }
+                  </script>
               </div>
             </div>
           </div>
@@ -187,21 +199,32 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
+                <div class="form-group" style="padding-bottom: 20px;">
+                  <label for="exampleFormControlSelect1">Nutrition Facts(per 240ml): 
+                     Calories: 2.4 
+                    | Fat: 0g 
+                    | Sodium: 4.8mg 
+                    | Carbohydrates: 0g 
+                    | Fiber: 0g 
+                    | Sugars: 0g 
+                    | Protein: 0.3g 
+                    | Caffeine: 82mg 
+                    | Potassium: 118mg<br><br>Current Volume: 0ml</label>
+              </div>
               <div class="form-group" style="padding-bottom: 20px;">
-                <label for="GoalAmount">98% water, 2% soluble plant matter </label>
-                <label for="GoalAmount">95mg-165mg caffeine</label>
-                <label for="GoalAmount"></label>
             </div>
           </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="pourFunction()">Pour Up!</button>
+                <script>
+                  function pourFunction() {
+                    alert("Measuring Poured Contents...");
+                  }
+                  </script>
               </div>
             </div>
           </div>
         </div>
-
-
         <div class="modal fade" id="currentContentsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
